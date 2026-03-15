@@ -100,10 +100,10 @@ if uploaded_file:
         st.subheader("Prediction Result")
 
         st.markdown(
-            f"""
-            <div class="prediction-box">
-            <b>Waste Type:</b> {label.capitalize()} <br><br>
-            <b>Confidence:</b> {confidence.item()*100:.2f}%  
+             f"""
+             <div class="prediction-box">
+                Waste Type: {label.capitalize()} <br>
+                Confidence: {confidence.item()*100:.2f}%
             </div>
             """,
             unsafe_allow_html=True
