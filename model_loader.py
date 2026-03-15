@@ -8,7 +8,7 @@ import streamlit as st
 MODEL_PATH = "waste_classifier.pth"
 
 # Replace this with your GitHub release file link
-MODEL_URL = "https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases/download/v1.0/waste_classifier.pth"
+MODEL_URL = "https://github.com/Mahi-Panchal/Upyog/releases/download/v1.0/waste_classifier.pth"
 
 
 def download_model():
