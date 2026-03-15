@@ -10,7 +10,7 @@ def download_model():
 
     if not os.path.exists(MODEL_PATH):
 
-        file_id = "PASTE_DRIVE_FILE_ID"
+        file_id = "https://drive.google.com/file/d/1poyQwfmxso842-2MeB8UOYmI61IJouxQ/view?usp=sharing"
 
         url = f"https://drive.google.com/uc?id={file_id}"
 
