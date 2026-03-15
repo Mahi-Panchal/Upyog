@@ -17,6 +17,7 @@ st.set_page_config(
 # Custom styling
 st.markdown("""
 <style>
+
 .big-title {
     font-size:50px !important;
     font-weight:700;
@@ -36,7 +37,10 @@ st.markdown("""
     border-radius:10px;
     text-align:center;
     font-size:20px;
+    color:black;   /* FIX */
+    font-weight:600;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
