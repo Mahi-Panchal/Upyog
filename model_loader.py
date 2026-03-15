@@ -1,31 +1,32 @@
 import torch
-import os
-import requests
 import torch.nn as nn
 from torchvision import models
+import requests
+import os
+import streamlit as st
 
 MODEL_PATH = "waste_classifier.pth"
 
-FILE_ID = "https://drive.google.com/file/d/1poyQwfmxso842-2MeB8UOYmI61IJouxQ/view?usp=drive_link"
-
-DOWNLOAD_URL = f"https://drive.google.com/uc?export=download&id={FILE_ID}"
+# Replace this with your GitHub release file link
+MODEL_URL = "https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases/download/v1.0/waste_classifier.pth"
 
 
 def download_model():
-
+    
     if not os.path.exists(MODEL_PATH):
 
-        response = requests.get(DOWNLOAD_URL)
+        response = requests.get(MODEL_URL)
 
         with open(MODEL_PATH, "wb") as f:
             f.write(response.content)
 
 
+@st.cache_resource
 def load_model():
 
     download_model()
 
-    model = models.resnet18(pretrained=False)
+    model = models.resnet18(weights=None)
 
     model.fc = nn.Linear(model.fc.in_features, 6)
 
